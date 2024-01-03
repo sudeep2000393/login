@@ -1,0 +1,70 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .dropdown-button + .dropdown-content a {
+            display: block;
+            width: 100%;
+            text-align: left;
+            padding: 10px;
+            text-decoration: none; /* Remove underline from the link */
+            color: black; /* Set the link color */
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Student Registration System</h1>
+
+    <p>Please select your role:</p>
+
+    <!-- Librarian Dropdown -->
+    <div class="dropdown">
+        <a href="{% url 'add_employee' %}" class="btn btn-secondary">Teacher</a>
+       
+    </div>
+
+    <a href="{% url 'user' %}" class="btn btn-secondary">User</a>
+</body>
+</html>

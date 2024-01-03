@@ -1,0 +1,32 @@
+<!-- myapp/templates/employee_form.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Form</title>
+</head>
+<body>
+    <h2>Employee Form</h2>
+    
+    <form method="post" action="{% url 'add_employee' %}" enctype="multipart/form-data">
+        {% csrf_token %}
+        
+        <label for="Author">First Name:</label>
+        <input type="text" name="first_name" required><br>
+        
+        <label for="Date">Last Name:</label>
+        <input type="text" name="last_name" required><br>
+        
+        <label for="Marks">Marks:</label>
+        <input type="number" name="marks" required><br>
+        
+        <label for="Email">Email:</label>
+        <input type="email" name="email" required><br>
+        
+        <label for="DateOfBirth">Date of Birth:</label>
+        <input type="date" name="date_of_birth" required><br>
+        
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
